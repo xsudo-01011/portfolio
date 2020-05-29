@@ -1,0 +1,219 @@
+
+/***************NAV-BAR***************/
+
+.navbg {
+    font-family: 'Chelsea Market', cursive;
+}
+
+
+
+.sttur a:hover {
+    background-color: sandybrown;
+    border-radius: 10px;
+    
+    
+}
+
+.navbg ul li  {
+    padding: 7px;
+    font-weight: bolder;
+    
+}
+.navbg ul li a {
+    color: teal;
+}
+
+/*********BG DIV*************/
+#divbg {
+    height:100vh;  
+}
+#divbgimg {
+    height: 100vh;
+    background: url("../images/bg.jpg" ) no-repeat center ;
+    background-size: cover;
+}
+
+ 
+#position {
+    position: absolute;
+    top: 0;
+}
+
+#desc {
+    
+    font-weight: lighter;
+    font-family: 'DM Mono', monospace;
+    color: snow;
+    font-size: x-large;
+}
+
+#cbtn {
+    background-color: orange;
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#cbtn:hover {
+    background-color:  #07000e;
+    color: bisque;
+}
+
+/**About me**/
+.aboutme {
+    background-color: whitesmoke;
+    
+}
+
+.bodytext {
+    font-weight: bolder;
+    font-family: 'DM Mono', monospace;
+    color: #07000e;
+}
+
+.headtext {
+    font-family: 'Chelsea Market', cursive;
+}
+
+.progbar {
+    background-color: #d75404;
+}
+
+/*******projects********/
+.projects {
+    background-color: snow;
+}
+
+.protext {
+    background-color: darkgray;
+    color: white;
+    border: 2px solid rgb(146, 137, 137);
+    padding: 30px;
+    font-weight: lighter;
+    font-family: 'DM Mono', monospace;
+}
+
+/*****web dev**/
+.webdev {
+    background-color: whitesmoke;
+}
+
+[class*="img-fluid"] {
+    padding: 10px;
+}
+
+/*****customer's say**/
+.customer {
+    background-color: orange;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Chelsea Market', cursive;
+}
+
+/*****blog*******/
+.blog {
+    background-color: snow;
+    
+    
+}
+
+.contents {
+    background-color: rgb(255, 255, 255);
+    font-family: 'DM Mono', monospace;
+    font-weight: lighter;
+}
+
+.hoverbord:hover {
+    border: 5px solid whitesmoke; 
+}
+
+.bord {
+    border: 1px solid rgb(240, 207, 147);
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+.readmore {
+    color: orange;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.readmore a:link, .readmore a:visited {
+    color: orange;
+}
+
+
+
+/*****contact*******/
+.contact {
+    background-color: orange;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Chelsea Market', cursive;
+}
+
+.inputs {
+    background-color: orange;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-weight: lighter;
+    font-size: larger;
+    
+}
+
+.inputs:focus {
+    background-color: orange;
+    border: none;
+    color: white;
+    font-family: 'DM Mono', monospace;
+    font-weight: 10;
+    font-size: larger;
+}
+
+.inputs::placeholder{
+    color: white;
+}
+
+#submit {
+    background-color: #07000e;
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#submit:hover {
+    background-color: white;
+    color: #07000e;
+}
+
+
+/*****footer*******/
+.footer {
+    background-color: white;
+}
+
+.footext {
+    font-weight: lighter;
+    font-family: 'DM Mono', monospace;
+    color: #07000e;
+}
+
+.foohead {
+    font-weight: lighter;
+    font-size: x-large;
+}
+
+.icons {
+    width: 50px;
+    height: 50px;
+}
+
+.foot a:link, .foot a:visited {
+    color: #07000e;
+}

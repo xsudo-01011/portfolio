@@ -1,0 +1,107 @@
+.blogfirst {
+    background-color: orange;
+    color: #07000e; 
+    font-weight: lighter;
+    font-family: 'Chelsea Market', cursive;
+    height: 100vh;
+}
+
+.fhead {
+    
+    font-weight: lighter;
+}
+
+.actual-blog {
+    color: rgb(141, 140, 140);
+    
+}
+
+.btns{
+    outline: none;
+    background-color: orange;
+    color: whitesmoke;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.disfocus:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.comment-form  input {
+    border: none;
+    border-bottom: 1px solid orange;
+    border-radius: 5px;
+}
+
+.comment-form input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#message {
+    border: none;
+    border-bottom: 1px solid orange;
+    border-radius: 5px;
+}
+
+/*******Side section********/
+.categ {
+    color: rgb(39, 39, 39);
+}
+
+.categ li  {
+    line-height: 45px;
+    list-style-type: none;
+    text-decoration: none;
+    border-bottom: 1px solid darkgrey;
+}
+
+.categ li a, a:visited  {
+    color: rgb(248, 197, 103);
+}
+
+.categ li a:hover {
+    text-decoration: none  ;
+}
+
+.categ li a span {
+    margin-left: 68%;
+}
+
+.about-author {
+    color: rgb(68, 67, 67);
+}
+
+
+
+
+
+
+
+
+/*****footer*******/
+.footer {
+    background-color: white;
+}
+
+.footext {
+    font-weight: lighter;
+    font-family: 'DM Mono', monospace;
+    color: #07000e;
+}
+
+.foohead {
+    font-weight: lighter;
+    font-size: x-large;
+}
+
+.icons {
+    width: 50px;
+    height: 50px;
+}
+
+.foot a:link, .foot a:visited {
+    color: #07000e;
+}
