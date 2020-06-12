@@ -40,6 +40,82 @@
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
 
+<!--**********************PHP FORM VALIDATION***********************************-->
+<?php
+
+/************************************************* 
+//setting all possible variables to empty
+$fname = $lname = $email = $subject = $comment = ""; 
+//variables to handle error messages
+$fname_err = $lname_err = $email_err = $subject_err = $comment_err = "";
+  
+  function sanitize_input($input){
+    $input = htmlspecialchars($input);
+    $input = trim($input);
+    $input = stripslashes($input);
+    $input = strip_tags($input);
+    return $input;
+  }
+
+  if($_SERVER['REQUEST_METHOD'] == POST){
+
+    if(empty($_POST['firstname'])){
+      $fname_err = "Can't be empty";
+    } else {
+      $fname = sanitize_input($_POST['firstname']);
+      // check if name only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$fname)) {
+            $fname_err = "Only letters and white space allowed";
+        }
+    }
+
+    if(empty($_POST['lastname'])){
+        $lname_err = "Can't be empty";
+      } else {
+        $lname = sanitize_input($_POST['lastname']);
+        // check if name only contains letters and whitespace
+          if (!preg_match("/^[a-zA-Z ]*$/",$lname)) {
+              $lname_err = "Only letters and white space allowed";
+          }
+      }
+
+    if(empty($_POST['email'])){
+      $email_err = "Email is required"; 
+    } else {
+      $email = sanitize_input($_POST['email']);
+      // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $email_err = "Invalid email format";
+      }
+    }
+
+    if(empty($_POST['subject'])){
+      $subject_err = "Subject is required"; 
+    } else {
+      $subject = sanitize_input($_POST['subject']);
+    }
+
+    if(empty($_POST['comment'])){
+      $comment_err = "At least say something"; 
+    } else {
+      $comment = sanitize_input($_POST['comment']);
+    }    
+
+
+  }
+
+
+
+
+
+
+
+
+**********************************************************************/
+
+?>
+<!--**********************PHP FORM VALIDATION***********************************-->
+
              <!--*****************NAV TOP*************************-->
             <nav class="navbar justify-content-center  navbar-expand-md bg-light navbar-light   navbg  fixed-top">
                 <!-- Brand -->
@@ -331,27 +407,28 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
-                                    <form action="php/contact.php" method="GET" >
+                                    <form action="php/contact.php" method="POST" autocomplete="">
                                         <div class="row">
                                             <div class="form-group col-6">
-                                                <input type="text" name="firsname" id="" placeholder="First Name" class="form-control inputs">
+                                                <input type="text" name="firstname" id="" value="" placeholder="First Name" class="form-control inputs" required><span class ></span>
                                             </div>
                                             <div class="form-group col-6">
-                                                <input type="text" name="firsname" id="" placeholder="First Name" class="form-control inputs"><br>
+                                                <input type="text" name="lastname" id="" value="" placeholder="Last Name" class="form-control inputs" required><span class ></span><br>
                                             </div>
                                             <div class="form-group col-12">
-                                                <input type="email" name="email" id="" placeholder="Email address" class="inputs form-control"><br>
+                                                <input type="email" name="email" id=""  value="" placeholder="Email address" class="inputs form-control" required ><span class ></span><br>
                                             </div>
                                             <div class="form-group col-12">
-                                                <input type="text" name="subject" id="" placeholder="Subject of the message" class="inputs form-control"> <br>
+                                                <input type="text" name="subject" id="" value="" placeholder="Subject of the message" class="inputs form-control" required><span class ></span> <br>
                                             </div>
                                             <div class="form-group col-12">
-                                                <textarea name="comment" id="comment" cols="" rows="10" placeholder="Type your message here..." class="inputs form-control"></textarea><br>
+                                                <textarea name="comment" id="comment" value="" cols="" rows="10" placeholder="Type your message here..." class="inputs form-control" maxlength="1000" required></textarea><span class ></span><br>
                                             </div>
                                                                                               
                                                 <input type="submit" name="submit" id="submit" value="Send Message" class="btn submitbtn ">
                                         </div>
                                     </form>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -407,8 +484,9 @@
                             </p>
                         </div>
                     </div><br><br><br><br>
-                    <div class="row">
-                        <div class="col-12 text-center">
+                    <div class="row">   
+                        
+                        <div class="col-12 text-center ">
                             <p class="footext" style="font-weight: bolder; background-color: rgb(172, 170, 150);">Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
@@ -424,9 +502,9 @@
 
 
 
-
-
-
+        <!----=============CUSTOMIZED JS SCRIPTS============-->
+        <script src="javascript/index.js"></script>
+5
 
         <!--================BOOTSTRAP LINKS=================-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

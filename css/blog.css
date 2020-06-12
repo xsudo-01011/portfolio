@@ -1,19 +1,22 @@
 .blogfirst {
+    
     background-color: orange;
     color: #07000e; 
     font-weight: lighter;
     font-family: 'Chelsea Market', cursive;
     height: 100vh;
+    
 }
 
+
+
 .fhead {
-    
     font-weight: lighter;
 }
 
 .actual-blog {
     color: rgb(141, 140, 140);
-    
+
 }
 
 .btns{

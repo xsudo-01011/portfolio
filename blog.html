@@ -17,19 +17,18 @@
  
                 <!--========STYLESHEETS===================-->
 
-                
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
                 <link rel="stylesheet" href="css/blog.css">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
                 <link rel="stylesheet" href="">
                 <link rel="stylesheet" href="">
 
-                    <!--=================JAVASCRIPTS==================-->
-                    <script src=""></script>
-                    <script src=""></script>
-                    <script src=""></script>
+                    <!--================BOOTSTRAP LINKS=================-->
+                    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-                        <!--===============FONTS=============-->
-                        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=DM+Mono:wght@300&display=swap" rel="stylesheet">
+                    <!--===============FONTS=============-->
+                    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=DM+Mono:wght@300&display=swap" rel="stylesheet">
                         
 
     </head>
@@ -46,11 +45,11 @@
                 <a class="navbar-brand" href="#" style="color:  #07000e; font-weight: bolder;">Xsudo</a>
                     <!-- Toggler/collapsibe Button -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topnav" >
-                        <span class="navbar-toggler-icon " style="background-color: orange;"  ></span>
+                        <span class="navbar-toggler-icon " style="background-color: orange;"  id="toggler"></span>
                     </button>
                         <!--nav links-->
                         <div class="collapse navbar-collapse" id="topnav">
-                            <ul class="navbar-nav sttur"> 
+                            <ul class="navbar-nav sttur" id="navmenu"> 
                                 <li class="nav-item  "><a class="nav-link " href="index.html#home" >Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="index.html#aboutme" >About</a></li>
                                 <li class="nav-item"><a class="nav-link" href="index.html#projects" >Projects</a></li>
@@ -62,13 +61,14 @@
             </nav>        
             
             <!------************colored BACKGROUND***********-->
-            <section id="blogfirst" class=""> 
+            <section id="blogfirst" class="" > 
                 <div class="">
                     <div class="row">
                         <div class="col-12">
-                            <div class="blogfirst justify-content-center"><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <div class="blogfirst justify-content-center" ><br><br><br><br><br><br><br><br><br><br><br><br>
                                 <h2  class="text-center  fhead  " >There Exist Two Types Of Pain...   The Pain Of Descipline, And The Pain Of Regret. <br> <i>Yeah!</i> </h2>
                                 <p class="text-center text-white">May 26, 2020 &bull; Posted By Korblavi Muto   </p>
+                                
                                 <br><br><br><br><br><br><br><br><br>
                             </div>
                         </div>
@@ -79,6 +79,9 @@
 
             <!--***********************ACTUAL Blog Post**********************-->
             <main class="" id="blog">
+                                     <button class="btn btn-round bg-info" id="trigger" style="position: relative;">let's jquery</button>
+                                     <button class="btn btn-round bg-danger" id="overlay">Test Space</button>
+                                     
                 <div class="container">
                     <div class="row">
                             <!--main posts-->
@@ -146,7 +149,7 @@ wisely. Made.com uses white space well:
 
                                   <div class="">
                                     <div class="">
-                                        <form action="#" class="comment-form id=">
+                                        <form action="#" class="comment-form " id="theform">
                                             <div class="form-group">
                                               <label for="name">Name *</label>
                                               <input type="text" class="form-control" id="name">
@@ -165,7 +168,7 @@ wisely. Made.com uses white space well:
                                               <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
                                             </div>
                                             <div class="form-group">
-                                              <input type="submit" value="Post Comment" class="btn btns">
+                                              <input type="submit" value="Post Comment" class="btn btns" id="jaytest">
                                             </div>
                               
                                           </form>
@@ -230,7 +233,7 @@ wisely. Made.com uses white space well:
 
 
             <!--************footer************-->
-            <footer class="container-fluid footer"><br><br><br><br>
+            <footer class="container-fluid footer" ><br><br><br><br>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
@@ -279,8 +282,8 @@ wisely. Made.com uses white space well:
                         </div>
                     </div><br><br><br><br>
                     <div class="row">
-                        <div class="col-12 text-center">
-                            <p class="footext" style="font-weight: bolder; background-color: rgb(172, 170, 150);">Copyright &copy;
+                        <div class="col-12 text-center" id="cpwrite">
+                            <p class="footext" style="font-weight: bolder; background-color: rgb(172, 170, 150);" id="thep">Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
                                 </script>
@@ -294,14 +297,13 @@ wisely. Made.com uses white space well:
 
 
 
+            
+        
+        <!----=============CUSTOMIZED JS SCRIPTS============-->
+        <script src="javascript/blog_jquery.js"></script>
 
-
-
-
-
-        <!--================BOOTSTRAP LINKS=================-->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        
+        
+        
     </body>
 </html>
